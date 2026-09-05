@@ -1,0 +1,8 @@
+.button {
+  /* o que TODOS os botões têm em comum: altura, padding, raio, fonte */
+}
+
+.button--primary   { /* verde cheio */ }
+.button--secondary { /* só borda */ }
+.button--danger    { /* vermelho, ações destrutivas */ }
+.button--disabled  { /* apagado, sem clique */ }

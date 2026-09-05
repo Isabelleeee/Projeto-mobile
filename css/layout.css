@@ -1,0 +1,14 @@
+/* section (blocos de conteúdo com título) */
+
+.section {
+  padding: var(--space-md);
+  /* espaço entre seções: */
+}
+
+.section__title {
+  /* tamanho, peso, cor */
+}
+
+.section__list {
+  /* lista simples (Escolhas do Editor) */
+}

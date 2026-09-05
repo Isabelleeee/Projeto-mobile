@@ -1,0 +1,6 @@
+.chip {
+  /* pílula: padding, raio pill, fonte pequena, não quebra linha */
+}
+
+.chip--selected { /* filtro ativo */ }
+.chip--category { /* categorias do menu lateral e da tela_01 */ }

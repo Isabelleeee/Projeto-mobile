@@ -1,0 +1,36 @@
+/* variables.css — valores fixos do projeto HABIT Mobile.
+   Único arquivo que define cores, espaçamentos e tipografia.
+   Os demais arquivos CSS usam var(--nome); nunca um valor solto. */
+
+:root {
+  /* Cores */
+  --color-primary:    #1F7A6D; /* verde HABIT: botão principal, aba ativa, link */
+  --color-bg:         #FFFFFF; /* fundo da página e dos itens de lista */
+  --color-surface:    #F5F5F3; /* fundo de card, caixinha, formulário */
+  --color-border:     #DDDDD9; /* linhas e bordas */
+  --color-text:       #1E1E1E; /* texto normal */
+  --color-text-muted: #6B6B6B; /* texto secundário: data, rótulo, e-mail */
+  --color-danger:     #B93A32; /* excluir, reprovar, bloquear, erro */
+  --color-success:    #2E7D4F; /* publicado, ativo */
+  --color-warning:    #B7791F; /* em revisão, em análise, pendências */
+
+  /* Espaçamento (múltiplos de 4) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Tipografia */
+  --font-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-sm: 12px; /* etiqueta, data */
+  --text-md: 14px; /* texto corrido */
+  --text-lg: 18px; /* título de card */
+  --text-xl: 24px; /* título de tela */
+
+  /* Bordas e sombra */
+  --radius-sm:   6px;   /* campo */
+  --radius-md:   12px;  /* card */
+  --radius-pill: 999px; /* etiqueta, chip */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,10 @@
+.card {
+  /* disposição padrão: imagem em cima, texto embaixo; borda, raio, sombra */
+}
+
+.card__image { }
+.card__title { }
+.card__meta  { /* data, categoria, tempo de leitura */ }
+
+.card--compact  { /* imagem pequena à esquerda */ }
+.card--featured { /* marcado como destaque */ }
