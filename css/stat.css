@@ -1,0 +1,30 @@
+/* stat.css — indicadores do admin (Posts, Visualizadores, Inscritos, Pendências). Telas 05–10. */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin: var(--space-md);
+  padding: var(--space-sm);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.stat {
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.stat__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.stat__value {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}

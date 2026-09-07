@@ -1,0 +1,39 @@
+.tabs {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  overflow-x: auto;
+}
+
+.tabs__item {
+  flex-shrink: 0;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.tabs__item--active {
+  background: var(--color-surface);
+  font-weight: 500;
+}
+
+.panel {                        /* painel branco arredondado que contém lista/formulário */
+  margin: 0 var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.panel__header {                /* "Categoria:" + busca/cabeçalho de colunas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: var(--text-md);
+  font-weight: 700;
+}

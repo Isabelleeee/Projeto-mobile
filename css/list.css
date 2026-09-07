@@ -1,0 +1,41 @@
+/* list.css — lista de registros do admin (05, 07, 08, 09, 10) */
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 56px;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list__title {                  /* "Categoria #1", "Post #1" */
+  flex: 1;
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.list__cell {                   /* colunas das telas 08, 09, 10: usuário / e-mail / status */
+  flex: 1;
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.list__actions {                /* botões à direita (Editar / Excluir, Agendar) */
+  display: flex;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.list__menu {                   /* três pontinhos (⋮) das telas 08–10 */
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  text-align: center;
+  color: var(--color-text);
+}
