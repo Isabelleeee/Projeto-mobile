@@ -69,7 +69,7 @@ flowchart LR
 
 ## Telas
 
-Protótipo no Figma: _link_
+Protótipo no Figma: https://www.figma.com/proto/htKxeWlWS3lrb8En2RQKwi/Projeto-Mobile?node-id=0-1&t=YhnVLenpl0rDtXOb-1
 
 | Tela | Nome | Arquivo | Componentes usados |
 |:--|:--|:--|:--|
