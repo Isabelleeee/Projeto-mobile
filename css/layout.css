@@ -1,14 +1,59 @@
-/* section (blocos de conteúdo com título) */
+/* layout.css — page (fundo da tela) e section (bloco de conteúdo com título) */
+
+.page {
+  min-height: 100vh;
+  padding-bottom: calc(var(--nav-height) + var(--space-lg)); /* espaço para a barra fixa */
+  background: var(--color-bg);
+  font-family: var(--font-base);
+  color: var(--color-text);
+}
+
+.page--muted {                  /* telas 04, 05–10, 12, 13, 14 */
+  background: var(--color-bg-muted);
+}
+
+.page__title {                  /* "Navegue e Descubra", "Tecnologia", "Resultados para: ..." */
+  padding: var(--space-md);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.page__title--center {
+  text-align: center;
+}
+
+.page__lead {                   /* texto de apoio abaixo do carrossel na tela_01 */
+  padding: 0 var(--space-md);
+  font-size: var(--text-md);
+  text-align: center;
+}
+
+.page__actions {                /* par de botões lado a lado */
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
 
 .section {
-  padding: var(--space-md);
-  /* espaço entre seções: */
+  padding: var(--space-md) 0;
 }
 
 .section__title {
-  /* tamanho, peso, cor */
+  padding: 0 var(--space-md) var(--space-sm);
+  font-size: var(--text-xl);
+  font-weight: 700;
 }
 
-.section__list {
-  /* lista simples (Escolhas do Editor) */
+.section__title--center {
+  text-align: center;
+  font-size: var(--text-2xl);
+  font-weight: 400;
+}
+
+.section__body {                /* conteúdo empilhado dentro da seção */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 0 var(--space-md);
 }

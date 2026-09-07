@@ -1,6 +1,5 @@
-/* header (topo), nav (barra inferior), nav__drawer (menu lateral) */
-
-/* ---------- Header ---------- */
+/* navigation.css — header (topo), nav (barra inferior), nav__drawer (menu lateral)
+   Aparece em todas as 14 telas. */
 
 .header {
   position: sticky;
@@ -9,78 +8,73 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  height: 56px;
+  height: var(--header-height);
   padding: 0 var(--space-md);
   background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: var(--shadow-card);
 }
 
-.header__menu {              /* ícone dos três tracinhos */
+.header__menu,
+.header__login {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   color: var(--color-text);
 }
 
-.header__logo {              /* "Habit" */
+.header__logo {
   font-family: var(--font-base);
   font-size: var(--text-lg);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-text);
 }
 
-.header__search {            /* campo de busca com lupa e microfone */
-  flex: 1;                   /* ocupa o espaço que sobra */
+.header__search {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  height: 32px;
+  height: 28px;
   padding: 0 var(--space-sm);
-  background: var(--color-surface);
+  background: var(--color-surface-2);
   border-radius: var(--radius-pill);
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
 
-.header__login {             /* ícone de entrar; vira avatar depois do login */
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  color: var(--color-text);
-}
-
-/* ---------- Barra inferior ---------- */
+/* Barra inferior — pílula escura com 5 ícones */
 
 .nav {
   position: fixed;
   left: 50%;
   bottom: var(--space-md);
-  transform: translateX(-50%);   /* centraliza a pílula */
+  transform: translateX(-50%);
   z-index: 10;
   display: flex;
   gap: var(--space-sm);
   padding: var(--space-sm);
-  background: var(--color-text);   /* fundo escuro do molde */
-  border-radius: var(--radius-pill);
+  background: var(--color-nav);
+  border-radius: var(--radius-lg);
 }
 
 .nav__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background: var(--color-bg);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   color: var(--color-text);
 }
 
 .nav__item--active {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
 }
 
-/* ---------- Menu lateral (abre pelo header__menu) ---------- */
+/* Menu lateral — abre pelo header__menu; contém o antigo rodapé */
 
 .nav__drawer {
   position: fixed;
@@ -91,13 +85,13 @@
   width: 280px;
   padding: var(--space-lg) var(--space-md);
   background: var(--color-bg);
-  border-right: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
 }
 
-.nav__drawer-item {          /* Instagram, Work, Bags, Lamp, Books */
+.nav__drawer-item {
   padding: var(--space-sm) 0;
   font-size: var(--text-md);
   color: var(--color-text);

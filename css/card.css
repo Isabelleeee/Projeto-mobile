@@ -1,10 +1,86 @@
+/* Aparece nas telas 01, 02, 03, 11, 14. */
+
 .card {
-  /* disposição padrão: imagem em cima, texto embaixo; borda, raio, sombra */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 200px;                          /* largura padrão dentro de carrossel */
+  min-height: 140px;
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
 }
 
-.card__image { }
-.card__title { }
-.card__meta  { /* data, categoria, tempo de leitura */ }
+.card__time {                            /* relógio + "3 min" no canto superior direito */
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
 
-.card--compact  { /* imagem pequena à esquerda */ }
-.card--featured { /* marcado como destaque */ }
+.card__meta {                            /* "31 Jul 2026 • Destaque" / "Rascunho" */
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.card__title {
+  font-size: var(--text-md);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.card__image {                           /* miniatura do card compacto */
+  flex-shrink: 0;
+  width: 128px;
+  height: 96px;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+}
+
+.card__body {                            /* texto ao lado da miniatura */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* Hero: card grande de abertura (Destaques na 01, topo das 02 e 03) */
+
+.card--hero {
+  width: 100%;
+  min-height: 240px;
+}
+
+.card--hero .card__title {
+  font-size: var(--text-xl);
+}
+
+/* Compact: miniatura à esquerda, fundo branco com sombra
+   (Escolhas do Diretor, resultados da busca, Suas Postagens) */
+
+.card--compact {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  min-height: auto;
+  padding: var(--space-sm);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-card);
+}
+
+/* Category: bloco cinza alto com o nome embaixo (Categorias Populares) */
+
+.card--category {
+  min-height: 130px;
+  justify-content: flex-end;
+}
+
+.card--category .card__title {
+  font-size: var(--text-lg);
+}

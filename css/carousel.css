@@ -1,0 +1,68 @@
+/* carousel.css — faixa horizontal com setas; usada na tela_01 (banner e categorias)
+   e nas telas 02 e 03 (Populares, Para você, Novidades...) */
+
+.carousel {
+  position: relative;
+}
+
+.carousel__track {
+  display: flex;
+  gap: var(--space-md);
+  padding: 0 var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__track > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  z-index: 1;
+}
+
+.carousel__arrow--prev { left: var(--space-xs); }
+.carousel__arrow--next { right: var(--space-xs); }
+
+/* Banner da tela_01: imagem grande com setas */
+
+.carousel--banner .carousel__track {
+  padding: 0 var(--space-md);
+}
+
+.carousel__dots {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-pill);
+}
+
+.carousel__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+.carousel__dot--active {
+  opacity: 1;
+  background: var(--color-text);
+}
