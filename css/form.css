@@ -1,0 +1,97 @@
+/* form.css — formulários das telas 04, 06, 12, 13, 14 e campos de busca do admin */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.form--centered {               /* 04, 12, 13: card no meio da tela */
+  margin-top: 40vh;
+  transform: translateY(-50%);
+}
+
+.form__title {
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.form__input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 var(--space-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  color: var(--color-text);
+}
+
+.form__input--square {          /* campos do Criar Post: cantos menos redondos */
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+}
+
+.form__input--search {          /* busca interna dos painéis admin */
+  min-height: 28px;
+  max-width: 140px;
+  padding-left: var(--space-lg);
+  background: var(--color-surface-2);
+  border: none;
+  box-shadow: none;
+  font-size: var(--text-sm);
+}
+
+.form__textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  resize: vertical;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.form__row {                    /* campo + botão de ícone lado a lado (Categorias e Tags + upload) */
+  display: flex;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.form__links {                  /* "Esqueci a senha • Criar conta" */
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.form__avatar {                 /* foto do perfil na tela_14 */
+  width: 100%;
+  height: 150px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+}

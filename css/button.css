@@ -1,0 +1,43 @@
+/* Variações: primary, secondary, icon, disabled */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 var(--space-md);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  font-size: var(--text-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button--primary {              /* Explorar Categorias, Assinar, Entrar, Publicar */
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.button--secondary {            /* Assinar a Newsletter, Editar, Excluir, Agendar, Salvar Rascunho */
+  background: var(--color-bg);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button--icon {                 /* botão só com ícone: upload da tela_06 */
+  width: 48px;
+  padding: 0;
+}
+
+.button--sm {                   /* botões de linha de lista (Editar / Excluir) */
+  min-height: 32px;
+  padding: 0 var(--space-sm);
+  font-size: var(--text-sm);
+}
+
+.button--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

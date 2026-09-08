@@ -1,0 +1,25 @@
+/* chip.css — filtros arredondados das telas 02 e 03 e categorias do menu lateral */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 var(--space-md);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.chip--selected {
+  background: var(--color-text);
+  color: var(--color-on-primary);
+}
+
+.chip-group {                   /* fileira de chips rolando na horizontal */
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0 var(--space-md);
+  overflow-x: auto;
+}
